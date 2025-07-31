@@ -51,7 +51,11 @@ export function Sidebar({
           <School className="h-8 w-8 text-blue-400" />
           {!isCollapsed && (
             <div>
-              <h1 className="text-xl font-bold">Automate Consults</h1>
+              <h1 className="text-xl font-bold">
+                {user?.role === "super_admin"
+                  ? "Autom8 consult"
+                  : "Automate Consult"}
+              </h1>
               <p className="text-sm text-slate-400">School Management</p>
             </div>
           )}
